@@ -16,9 +16,9 @@ public class SumaSimple {
         int suma = num1 + num2;
 
         if (suma == objetivo) {
-            System.out.println("\n✔ ¡Correcto! " + num1 + " + " + num2 + " = " + suma);
+            System.out.println("\nCorrecto! " + num1 + " + " + num2 + " = " + suma);
         } else {
-            System.out.println("\n✘ Incorrecto. " + num1 + " + " + num2 + " = " + suma);
+            System.out.println("\nIncorrecto. " + num1 + " + " + num2 + " = " + suma);
         }
 
         sc.close();
