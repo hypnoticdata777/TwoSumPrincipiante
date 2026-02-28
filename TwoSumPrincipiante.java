@@ -1,12 +1,16 @@
+import java.util.HashMap;
+
 public class TwoSumPrincipiante {
 
+    // Mejorado de O(n²) a O(n) usando un HashMap
     public int[] solve(int[] nums, int objetivo) {
+        HashMap<Integer, Integer> visto = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == objetivo) {
-                    return new int[]{i, j};
-                }
+            int complemento = objetivo - nums[i];
+            if (visto.containsKey(complemento)) {
+                return new int[]{visto.get(complemento), i};
             }
+            visto.put(nums[i], i);
         }
         return new int[]{};
     }
